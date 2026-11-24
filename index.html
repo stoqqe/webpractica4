@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список справ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>Список справ</h1>
+      <div class="counter" id="counter">Завдань: 0 · Виконано: 0</div>
+    </header>
+
+    <form class="form" id="taskForm" novalidate>
+      <input class="form__input" id="taskInput" type="text" placeholder="Нове завдання..." maxlength="100" autocomplete="off">
+      <button class="btn btn--primary" id="addBtn" type="submit">Додати</button>
+    </form>
+    <p class="validation" id="validation"></p>
+
+    <div class="status status--error" id="error" hidden>
+      <span id="errorText"></span>
+      <button class="btn btn--small" id="retryBtn" type="button">Повторити</button>
+    </div>
+
+    <div class="loader" id="loader" hidden>
+      <div class="spinner"></div>
+      <span>Завантаження...</span>
+    </div>
+
+    <ul class="list" id="taskList"></ul>
+    <p class="empty" id="empty" hidden>Список порожній. Додайте перше завдання!</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
